@@ -3,7 +3,7 @@
 import type { FormEvent } from 'react';
 import { useEffect, useState } from 'react';
 
-const disciplines = ['AI', 'Software', 'Cloud Infrastructure', 'Data Engineering', 'DevOps', 'Cybersecurity', 'Automation'];
+const disciplines = ['AI', 'Software', 'Cloud Infrastructure', 'Data Intelligence', 'DevOps', 'Cybersecurity', 'Automation'];
 
 const clients = [
   ['Atlassian', '/clients/atlassian.svg'],
