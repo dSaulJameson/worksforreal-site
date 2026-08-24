@@ -26,7 +26,7 @@ button, input, textarea { font: inherit; }
 .section-heading-row > p { margin: 0; font-size: 17px; line-height: 1.65; max-width: 470px; }
 
 /* Hero */
-.hero { min-height: 720px; position: relative; overflow: hidden; padding: 0 clamp(22px,5vw,76px) 30px; display: flex; flex-direction: column; isolation: isolate; }
+.hero { position: relative; overflow: hidden; padding: 0 clamp(22px,5vw,76px) 30px; display: flex; flex-direction: column; isolation: isolate; }
 .hero::before { content: ''; position: absolute; inset: 0; z-index: -3; background: radial-gradient(ellipse at 75% 105%, rgba(241,164,91,.19), transparent 42%), radial-gradient(circle at 18% 34%, rgba(46,233,255,.11), transparent 30%), #050708; }
 .hero::after { content: ''; position: absolute; width: 110%; height: 38%; left: -5%; bottom: -29%; border: 1px solid rgba(241,164,91,.34); border-radius: 50%; box-shadow: 0 -38px 100px rgba(241,164,91,.10); z-index: -1; }
 .hero-grid { position: absolute; inset: 0; z-index: -2; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(circle at 24% 44%,#000,transparent 64%); }
@@ -48,15 +48,15 @@ button, input, textarea { font: inherit; }
 .site-menu nav a:last-child { border-bottom: 0; }
 .site-menu nav a:hover { color: var(--cyan); background: rgba(46,233,255,.06); }
 .site-menu nav span { color: rgba(242,240,233,.35); font: 9px var(--font-geist-mono); }
-.hero-content { width: min(1180px,100%); margin: auto; padding: clamp(42px,7vh,76px) 0 46px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hero-content { width: min(1180px,100%); margin: 0 auto; padding: 8px 0 40px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--font-geist-mono); text-transform: uppercase; letter-spacing: .14em; color: rgba(242,240,233,.56); font-size: 11px; }
 .eyebrow i { width: 4px; height: 4px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 9px var(--cyan); }
-.hero h1 { margin: 20px 0 22px; font-size: clamp(58px,7.8vw,122px); line-height: .84; letter-spacing: -.07em; font-weight: 630; max-width: 1180px; }
+.hero h1 { width: 100%; margin: 20px 0 22px; font-size: clamp(58px,7.8vw,122px); line-height: .84; letter-spacing: -.07em; font-weight: 630; max-width: 1180px; }
 .hero h1 > span { display: block; }
 .cycling-stage { min-height: .92em; perspective: 700px; overflow: hidden; }
 .cycling-word { width: fit-content; margin: 0 auto; color: var(--paper); animation: word-in .62s cubic-bezier(.2,.8,.2,1); padding: 0 .08em .08em 0; transform-origin: center bottom; }
 .hero-rest { color: rgba(242,240,233,.92); }
-.hero h1 > .hero-statement-logo { display: flex; justify-content: center; font-size: 1em; line-height: .84; margin-top: .03em; letter-spacing: -.035em; }
+.hero h1 > .hero-statement-logo { display: flex; justify-content: center; flex-wrap: nowrap; white-space: nowrap; font-size: 1em; line-height: .84; margin-top: .03em; letter-spacing: -.035em; }
 .hero-statement-logo .wordmark-muted { color: rgba(242,240,233,.55); }
 @keyframes word-in { from { opacity: 0; transform: translateY(55%) rotateX(-62deg); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
 .hero-copy { width: min(650px,100%); color: rgba(242,240,233,.63); font-size: clamp(16px,1.35vw,19px); line-height: 1.55; margin: 0 auto; }
@@ -172,11 +172,11 @@ footer > div { display: flex; gap: 18px; font-size: 11px; color: rgba(242,240,23
 
 @media (max-width: 720px) {
   .section-pad { padding: 82px 22px; }
-  .hero { min-height: 680px; padding-bottom: 24px; }
+  .hero { padding-bottom: 24px; }
   .hero-header { height: 64px; }
   .site-menu { top: 13px; }
-  .wordmark { font-size: 13px; gap: 6px; } .hero-content { padding: 42px 0 36px; }
-  .hero h1 { font-size: clamp(53px,17vw,82px); line-height: .88; } .eyebrow { font-size: 8px; gap: 7px; }
+  .wordmark { font-size: 13px; gap: 6px; } .hero-content { padding: 8px 0 36px; }
+  .hero h1 { font-size: clamp(38px,10vw,72px); line-height: .88; } .eyebrow { font-size: 8px; gap: 7px; }
   .hero-copy { font-size: 15px; }
   .hero-actions { margin-top: 22px; }
   .hero-trust { overflow: hidden; }
