@@ -3,8 +3,8 @@
 :root {
   --ink: #050708;
   --ink-soft: #0b0f10;
-  --paper: #f2f0e9;
-  --paper-dim: #d6d5cf;
+  --paper: #dedbd3;
+  --paper-dim: #c8c5bd;
   --cyan: #2ee9ff;
   --amber: #f1a45b;
   --line: rgba(255,255,255,.13);
@@ -76,7 +76,9 @@ button, input, textarea { font: inherit; }
 /* Logos + thesis */
 .logo-row { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 24px 42px; }
 .logo-row img { width: 112px; height: 34px; object-fit: contain; filter: grayscale(1) contrast(1.5); opacity: .72; }
-.thesis { background: var(--paper); color: var(--ink); padding-top: 80px; }
+.thesis { background: var(--paper); color: var(--ink); padding-top: clamp(126px,10vw,158px); position: relative; }
+.thesis::before, .capabilities::before, .work::before, .contact::before { content: ''; position: absolute; inset: 0 0 auto; height: clamp(96px,8vw,132px); pointer-events: none; }
+.thesis::before { background: linear-gradient(180deg,#050708 0%,#141718 18%,#343637 39%,#777772 64%,#b7b4ad 83%,var(--paper) 100%); }
 .thesis-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 10vw; padding: 80px 0 100px; }
 .thesis h2 { font-size: clamp(66px,9.5vw,150px); line-height: .83; letter-spacing: -.075em; font-weight: 610; margin: 0; max-width: 900px; }
 .thesis-copy { max-width: 620px; padding-top: 16px; }
@@ -91,7 +93,8 @@ button, input, textarea { font: inherit; }
 .real-checks p { margin: 8px 0 0; color: rgba(5,7,8,.55); line-height: 1.5; font-size: 14px; }
 
 /* Capabilities */
-.capabilities { background: var(--ink); }
+.capabilities { background: var(--ink); position: relative; padding-top: clamp(126px,10vw,158px); }
+.capabilities::before { background: linear-gradient(180deg,var(--paper) 0%,#b7b4ad 17%,#777772 38%,#343637 63%,#141718 82%,var(--ink) 100%); }
 .capabilities .section-heading-row > p { color: rgba(242,240,233,.57); }
 .capability-list { border-top: 1px solid var(--line); }
 .capability-row { display: grid; grid-template-columns: 64px minmax(250px,.8fr) 1.2fr 30px; gap: 3vw; align-items: center; min-height: 130px; border-bottom: 1px solid var(--line); transition: background .25s,color .25s,padding .25s; }
@@ -103,7 +106,8 @@ button, input, textarea { font: inherit; }
 .capability-row b { font-size: 18px; font-weight: 420; }
 
 /* Work */
-.work { background: var(--paper); color: var(--ink); }
+.work { background: var(--paper); color: var(--ink); position: relative; padding-top: clamp(126px,10vw,158px); }
+.work::before { background: linear-gradient(180deg,var(--ink) 0%,#141718 18%,#343637 39%,#777772 64%,#b7b4ad 83%,var(--paper) 100%); }
 .dark-heading h2 em, .about-intro h2 em { color: rgba(5,7,8,.35); font-style: normal; }
 .dark-heading > p { color: rgba(5,7,8,.57); }
 .project-list { border-top: 1px solid var(--dark-line); }
@@ -139,7 +143,8 @@ button, input, textarea { font: inherit; }
 .founder-details > a { display: inline-block; font-size: 13px; font-weight: 700; border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
 
 /* Contact */
-.contact { background: var(--ink); position: relative; overflow: hidden; }
+.contact { background: var(--ink); position: relative; overflow: hidden; padding-top: clamp(126px,10vw,158px); }
+.contact::before { background: linear-gradient(180deg,var(--paper) 0%,#b7b4ad 17%,#777772 38%,#343637 63%,#141718 82%,var(--ink) 100%); }
 .contact-glow { position: absolute; width: 900px; height: 420px; border-radius: 50%; left: -120px; bottom: -330px; border: 1px solid rgba(241,164,91,.28); box-shadow: 0 -80px 150px rgba(241,164,91,.10); }
 .contact-grid { display: grid; grid-template-columns: 1fr .72fr; gap: 10vw; padding-top: 76px; position: relative; }
 .contact-pitch h2 { margin: 0; font-size: clamp(74px,10.5vw,164px); line-height: .81; letter-spacing: -.08em; font-weight: 620; }
@@ -184,7 +189,7 @@ footer > div { display: flex; gap: 18px; font-size: 11px; color: rgba(242,240,23
   .hero-trust .logo-row::-webkit-scrollbar { display: none; }
   .hero-trust .logo-row img { flex: 0 0 86px; }
   .hero-proof { padding-top: 13px; } .logo-row { gap: 20px 28px; } .logo-row img { width: 92px; height: 28px; }
-  .thesis { padding-top: 60px; } .thesis-grid { padding: 64px 0 72px; }
+  .thesis, .capabilities, .work, .contact { padding-top: 112px; } .thesis-grid { padding: 64px 0 72px; }
   .real-checks { grid-template-columns: 1fr; }
   .real-checks > div, .real-checks > div + div { border-right: 0; border-top: 1px solid var(--dark-line); padding: 22px 0; min-height: 150px; }
   .real-checks > div:first-child { border-top: 0; }
