@@ -154,40 +154,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="capabilities section-pad" id="capabilities">
-        <div className="section-kicker light"><span>01</span><span>What we make work</span></div>
-        <div className="section-heading-row">
-          <h2>From the model layer<br />to the cloud invoice.</h2>
-          <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
-        </div>
-        <div className="capability-list">
-          {capabilities.map(([number, title, copy]) => (
-            <article className="capability-row" key={number}>
-              <span>{number}</span><h3>{title}</h3><p>{copy}</p><b aria-hidden="true">↗</b>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="work section-pad" id="work">
-        <div className="section-kicker"><span>02</span><span>Selected proof</span></div>
-        <div className="section-heading-row dark-heading">
-          <h2>Built into the business.<br /><em>Measured by what changes.</em></h2>
-          <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project" key={project.number}>
-              <div className="project-index"><span>{project.number}</span><p>{project.label}</p></div>
-              <div className="project-metric">{project.metric}</div>
-              <div className="project-story"><h3>{project.title}</h3><p>{project.copy}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="about section-pad" id="about">
-        <div className="section-kicker"><span>03</span><span>The cofounders</span></div>
+        <div className="section-kicker"><span>01</span><span>The cofounders</span></div>
         <div className="about-intro">
           <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
           <p>Works for Real brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
@@ -213,6 +181,38 @@ export default function Home() {
               <a href="https://www.linkedin.com/in/dsauljameson/">LinkedIn ↗</a>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section className="capabilities section-pad" id="capabilities">
+        <div className="section-kicker light"><span>02</span><span>What we make work</span></div>
+        <div className="section-heading-row">
+          <h2>From the model layer<br />to the cloud invoice.</h2>
+          <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
+        </div>
+        <div className="capability-list">
+          {capabilities.map(([number, title, copy]) => (
+            <article className="capability-row" key={number}>
+              <span>{number}</span><h3>{title}</h3><p>{copy}</p><b aria-hidden="true">↗</b>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="work section-pad" id="work">
+        <div className="section-kicker"><span>03</span><span>Selected proof</span></div>
+        <div className="section-heading-row dark-heading">
+          <h2>Built into the business.<br /><em>Measured by what changes.</em></h2>
+          <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
+        </div>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article className="project" key={project.number}>
+              <div className="project-index"><span>{project.number}</span><p>{project.label}</p></div>
+              <div className="project-metric">{project.metric}</div>
+              <div className="project-story"><h3>{project.title}</h3><p>{project.copy}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
+            </article>
+          ))}
         </div>
       </section>
 
