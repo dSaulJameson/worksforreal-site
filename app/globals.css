@@ -180,10 +180,10 @@ footer > div { display: flex; gap: 18px; font-size: 11px; color: rgba(242,240,23
 
 @media (max-width: 720px) {
   .section-pad { padding: 82px 22px; }
-  .hero { padding-bottom: 24px; }
+  .hero { min-height: 100svh; display: grid; grid-template-rows: 64px minmax(0,1fr) auto auto; padding-bottom: max(12px,env(safe-area-inset-bottom)); }
   .hero-header { height: 64px; }
   .site-menu { top: 13px; }
-  .wordmark { font-size: 13px; gap: 6px; } .hero-content { padding: 8px 0 36px; }
+  .wordmark { font-size: 13px; gap: 6px; } .hero-content { align-self: center; padding: 12px 0 24px; transform: translateY(-2.5vh); }
   .hero h1 { font-size: clamp(32px,8.5vw,72px); line-height: .88; } .eyebrow { font-size: 8px; gap: 7px; }
   .hero-copy { font-size: 15px; }
   .hero-actions { margin-top: 28px; }
@@ -192,7 +192,7 @@ footer > div { display: flex; gap: 18px; font-size: 11px; color: rgba(242,240,23
   .hero-trust .logo-track { width: max-content; justify-content: flex-start; animation: logo-marquee 24s linear infinite; }
   .hero-trust .logo-set, .hero-trust .logo-set + .logo-set { width: max-content; display: flex; justify-content: flex-start; gap: 30px; padding-right: 30px; }
   .hero-trust .logo-set img { width: 86px; }
-  .hero-proof { padding-top: 13px; } .logo-row { gap: 20px 28px; } .logo-row img { width: 92px; height: 28px; }
+  .hero-proof { padding-top: 12px; } .logo-row { gap: 20px 28px; } .logo-row img { width: 92px; height: 28px; }
   .thesis, .capabilities, .work, .contact { padding-top: 112px; } .thesis-grid { padding: 64px 0 72px; }
   .real-checks { grid-template-columns: 1fr; }
   .real-checks > div, .real-checks > div + div { border-right: 0; border-top: 1px solid var(--dark-line); padding: 22px 0; min-height: 150px; }
