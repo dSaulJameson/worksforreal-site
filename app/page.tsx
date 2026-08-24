@@ -87,15 +87,20 @@ export default function Home() {
   return (
     <main>
       <section className="hero" id="top">
-        <nav className="nav" aria-label="Primary navigation">
+        <header className="hero-header">
+          <details className="site-menu">
+            <summary aria-label="Open navigation"><span /><span /></summary>
+            <nav aria-label="Primary navigation">
+              <a href="#work"><span>01</span>Work</a>
+              <a href="#capabilities"><span>02</span>Capabilities</a>
+              <a href="#about"><span>03</span>About</a>
+              <a href="#contact"><span>04</span>Contact</a>
+            </nav>
+          </details>
           <a className="wordmark" href="#top" aria-label="Works for Real home">
-            <span className="wordmark-dot" /><span>WORKS</span><span className="wordmark-muted">FOR REAL</span>
+            <span>WORKS</span><span className="wordmark-muted">FOR REAL</span><span className="wordmark-period">.</span>
           </a>
-          <div className="nav-links">
-            <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#about">About</a>
-            <a className="nav-cta" href="https://tidycal.com/dsauljameson/15-minute-meeting">Start something <span aria-hidden="true">↗</span></a>
-          </div>
-        </nav>
+        </header>
 
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
@@ -104,27 +109,24 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow"><span>Strategy</span><i /><span>Engineering</span><i /><span>Execution</span></p>
           <h1>
-            We make
-            <span className="cycling-word" key={disciplines[activeWord]}>{disciplines[activeWord]}</span>
+            <span>We make</span>
+            <span className="cycling-stage"><span className="cycling-word" key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
             <span className="hero-rest">that works for real.</span>
           </h1>
-          <p className="hero-copy">Not demos. Not decks. AI, systems, and software built into the business—and accountable to what changes.</p>
+          <p className="hero-copy">Not demos. Not decks. AI, systems, and software built into the business. Accountable to what changes.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="https://tidycal.com/dsauljameson/15-minute-meeting">Tell us what needs to work <span>↗</span></a>
             <a className="button button-secondary" href="#work">See the proof <span>↓</span></a>
           </div>
         </div>
 
-        <div className="hero-proof">
-          <div><strong>$1B+</strong><span>processed by shipped systems</span></div>
-          <div><strong>10+ yrs</strong><span>production software + ML</span></div>
-          <div><strong>2 founders</strong><span>senior builders, start to finish</span></div>
+        <div className="hero-trust" aria-label="Selected clients">
+          <p>Trusted by</p>
+          <div className="logo-row">{clients.map(([name, src]) => <img key={name} src={src} alt={`${name} logo`} />)}</div>
         </div>
-      </section>
-
-      <section className="trust" aria-label="Selected clients">
-        <p>Trusted by teams doing consequential work</p>
-        <div className="logo-row">{clients.map(([name, src]) => <img key={name} src={src} alt={`${name} logo`} />)}</div>
+        <div className="hero-proof">
+          <strong>$1B+</strong><span>processed by shipped systems</span>
+        </div>
       </section>
 
       <section className="thesis section-pad">
@@ -176,19 +178,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="method section-pad">
-        <div className="section-kicker light"><span>03</span><span>How we work</span></div>
-        <h2>Know enough.<br />Make the right thing.<br /><em>Prove it works.</em></h2>
-        <div className="method-steps">
-          <div><span>01 / KNOW</span><p>Get close to the real constraint, the users, the economics, and the existing system.</p></div>
-          <div><span>02 / MAKE</span><p>Put senior builders on the shortest path to something complete, useful, and maintainable.</p></div>
-          <div><span>03 / PROVE</span><p>Define success before launch. Instrument the system. Measure the change.</p></div>
-          <div><span>04 / RUN</span><p>Own the handoff, operations, and next iteration—not just the celebratory demo.</p></div>
-        </div>
-      </section>
-
       <section className="about section-pad" id="about">
-        <div className="section-kicker"><span>04</span><span>The cofounders</span></div>
+        <div className="section-kicker"><span>03</span><span>The cofounders</span></div>
         <div className="about-intro">
           <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
           <p>Works for Real brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
@@ -219,7 +210,7 @@ export default function Home() {
 
       <section className="contact section-pad" id="contact">
         <div className="contact-glow" aria-hidden="true" />
-        <div className="section-kicker light"><span>05</span><span>Start with the problem</span></div>
+        <div className="section-kicker light"><span>04</span><span>Start with the problem</span></div>
         <div className="contact-grid">
           <div className="contact-pitch">
             <h2>What needs<br />to work?</h2>
@@ -239,7 +230,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="wordmark" href="#top"><span className="wordmark-dot" /><span>WORKS</span><span className="wordmark-muted">FOR REAL</span></a>
+        <a className="wordmark" href="#top"><span>WORKS</span><span className="wordmark-muted">FOR REAL</span><span className="wordmark-period">.</span></a>
         <p>AI, systems, and software that work in the real world.</p>
         <div><a href="mailto:info@worksforreal.com">Email</a><a href="https://www.linkedin.com/in/fitzpatrickstephan/">Stephan</a><a href="https://www.linkedin.com/in/dsauljameson/">Saul</a></div>
         <span>© 2026 Works for Real</span>
