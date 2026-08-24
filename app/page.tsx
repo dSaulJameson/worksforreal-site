@@ -122,7 +122,15 @@ export default function Home() {
 
         <div className="hero-trust" aria-label="Selected clients">
           <p>Trusted by</p>
-          <div className="logo-row">{clients.map(([name, src]) => <img key={name} src={src} alt={`${name} logo`} />)}</div>
+          <div className="logo-marquee">
+            <div className="logo-track">
+              {[0, 1].map((copy) => (
+                <div className="logo-set" key={copy} aria-hidden={copy === 1 ? 'true' : undefined}>
+                  {clients.map(([name, src]) => <img key={`${copy}-${name}`} src={src} alt={copy === 0 ? `${name} logo` : ''} />)}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <div className="hero-proof">
           <strong>$1B+</strong><span>processed by shipped systems</span>
