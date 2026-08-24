@@ -54,8 +54,10 @@ button, input, textarea { font: inherit; }
 .hero h1 { margin: 20px 0 22px; font-size: clamp(58px,7.8vw,122px); line-height: .84; letter-spacing: -.07em; font-weight: 630; max-width: 1180px; }
 .hero h1 > span { display: block; }
 .cycling-stage { min-height: .92em; perspective: 700px; overflow: hidden; }
-.cycling-word { width: fit-content; margin: 0 auto; color: var(--cyan); animation: word-in .62s cubic-bezier(.2,.8,.2,1); padding: 0 .08em .08em 0; transform-origin: center bottom; text-shadow: 0 0 36px rgba(46,233,255,.14); }
+.cycling-word { width: fit-content; margin: 0 auto; color: var(--paper); animation: word-in .62s cubic-bezier(.2,.8,.2,1); padding: 0 .08em .08em 0; transform-origin: center bottom; }
 .hero-rest { color: rgba(242,240,233,.92); }
+.hero-statement-logo { display: inline-flex; font-size: .72em; vertical-align: .08em; margin-left: .08em; letter-spacing: .035em; }
+.hero-statement-logo .wordmark-muted { color: rgba(242,240,233,.55); }
 @keyframes word-in { from { opacity: 0; transform: translateY(55%) rotateX(-62deg); filter: blur(10px); } to { opacity: 1; transform: none; filter: none; } }
 .hero-copy { width: min(650px,100%); color: rgba(242,240,233,.63); font-size: clamp(16px,1.35vw,19px); line-height: 1.55; margin: 0 auto; }
 .hero-actions { display: flex; justify-content: center; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
