@@ -109,11 +109,9 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow"><span>Strategy</span><i /><span>Engineering</span><i /><span>Execution</span></p>
           <h1>
-            <span>We make</span>
             <span className="cycling-stage"><span className="cycling-word" key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
-            <span className="hero-rest">
-              that <span className="wordmark hero-statement-logo" aria-label="Works for Real"><span>WORKS</span><span className="wordmark-muted">FOR REAL</span><span className="wordmark-period">.</span></span>
-            </span>
+            <span className="hero-rest">built by</span>
+            <span className="wordmark hero-statement-logo" aria-label="Works for Real"><span>WORKS</span><span className="wordmark-muted">FOR REAL</span><span className="wordmark-period">.</span></span>
           </h1>
           <p className="hero-copy">Not demos. Not decks. AI, systems, and software built into the business. Accountable to what changes.</p>
           <div className="hero-actions">
