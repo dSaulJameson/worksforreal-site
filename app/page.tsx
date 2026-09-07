@@ -128,7 +128,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow"><span>Strategy</span><i /><span>Engineering</span><i /><span>Throughput</span></p>
           <h1>
-            <span className="cycling-stage"><span className="cycling-word" key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
+            <span className="cycling-stage"><span className={`cycling-word ${disciplines[activeWord].length > 14 ? 'cycling-word-long' : ''}`} key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
             <span className="executed">Executed.</span>
           </h1>
           <p className="hero-copy">Bring us the strategy. Bring us the problem. Or ask us to shape both. We turn ambitious work into shipped, working systems.</p>

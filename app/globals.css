@@ -58,6 +58,7 @@ button, input, textarea { font: inherit; }
 .hero h1 > span { display: block; }
 .cycling-stage { min-height: .92em; perspective: 700px; overflow: hidden; }
 .cycling-word { width: fit-content; margin: 0 auto; padding: 0 .08em .1em 0; white-space: nowrap; animation: word-in .58s cubic-bezier(.2, .8, .2, 1); transform-origin: center bottom; }
+.cycling-word-long { max-width: 100%; font-size: .72em; line-height: 1.08; letter-spacing: -.07em; }
 .executed { position: relative; width: fit-content; margin: .05em auto 0; padding: 0 .06em .12em 0; font-size: 1.2em; font-weight: 780; letter-spacing: -.09em; }
 .executed::after { content: ''; position: absolute; left: 2%; right: -2%; bottom: -.02em; height: .055em; border-radius: 70% 30% 60% 35%; background: var(--blue); transform: rotate(-2.1deg); }
 @keyframes word-in { from { opacity: 0; transform: translateY(50%) rotateX(-50deg); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
@@ -244,6 +245,7 @@ footer > div { display: flex; gap: 18px; color: rgba(243, 238, 226, .65); font-s
   .eyebrow { font-size: 8px; gap: 7px; }
   .eyebrow i { width: 10px; }
   .hero h1 { font-size: clamp(50px, 16vw, 86px); line-height: .8; margin: 28px 0; }
+  .cycling-word-long { font-size: .6em; line-height: 1.25; letter-spacing: -.06em; }
   .hero-copy { font-size: 15px; }
   .hero-actions { margin-top: 28px; }
   .hero-trust { overflow: hidden; }
