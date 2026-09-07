@@ -111,7 +111,7 @@ export default function Home() {
               <a href="#about"><span>02</span>Department heads</a>
               <a href="#capabilities"><span>03</span>Capabilities</a>
               <a href="#work"><span>04</span>Proof</a>
-              <a href="#partners"><span>05</span>For strategists</a>
+              <a href="#partners"><span>05</span>Your execution department</a>
               <a href="#contact"><span>06</span>Start a project</a>
             </nav>
           </details>
@@ -232,15 +232,15 @@ export default function Home() {
       </section>
 
       <section className="partners section-pad" id="partners">
-        <div className="section-kicker light"><span>05</span><span>Flexible by design</span></div>
+        <div className="section-kicker light"><span>05</span><span>For people with something to move</span></div>
         <div className="partners-head">
-          <p className="partner-audience">Strategists.<br />Advisors. Agencies.</p>
+          <p className="partner-audience">Product. Leadership.<br /><span>Sales. Marketing.<br />Strategy. AI.</span></p>
           <div>
-            <h2>We do this<br /><em>for you.</em></h2>
-            <p>You own the client, the opportunity, and the ambition. We add the strategy, technical depth, and delivery capacity to turn it into something real.</p>
+            <h2>We want to be your<br /><em>Execution Department.</em></h2>
+            <p>Whether you are a CEO, a product leader, in sales or marketing, a strategist, an advisor, an agency, or building in AI—we are the technical partner and throughput behind the work. Client-facing when you want us. Invisible when you don&apos;t.</p>
           </div>
         </div>
-        <div className="superstar-line"><span>Flexible by design.</span><strong>Client-facing when you need us. Invisible when you don&apos;t.</strong></div>
+        <div className="superstar-line"><span>Our job:</span><strong>Make you look like a superstar.</strong></div>
         <div className="partner-grid">
           {partnerModes.map((mode) => (
             <article key={mode.number}>
