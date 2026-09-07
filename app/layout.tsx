@@ -14,21 +14,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://worksforreal.com'),
-  title: 'Works for Real — AI, systems, and software that work',
-  description: 'Senior strategy and engineering for AI, software, cloud, data, automation, DevOps, and cybersecurity that work in the real world.',
+  title: 'Execution Department — Whatever it is. Executed.',
+  description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Works for Real',
-    description: 'AI, systems, and software that work in the real world.',
+    title: 'Execution Department — Whatever it is. Executed.',
+    description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
     url: '/',
-    siteName: 'Works for Real',
+    siteName: 'Execution Department',
     type: 'website',
-    images: [{ url: '/og.png', width: 1536, height: 805, alt: 'Works for Real — AI, systems, and software that work.' }],
+    images: [{ url: '/og.png', width: 1732, height: 908, alt: 'Execution Department — Whatever it is. Executed.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Works for Real',
-    description: 'AI, systems, and software that work in the real world.',
+    title: 'Execution Department — Whatever it is. Executed.',
+    description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
     images: ['/og.png'],
   },
 };
