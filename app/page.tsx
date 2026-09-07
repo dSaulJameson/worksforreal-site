@@ -108,11 +108,11 @@ export default function Home() {
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Primary navigation">
               <a href="#department"><span>01</span>The department</a>
-              <a href="#about"><span>02</span>Department heads</a>
-              <a href="#capabilities"><span>03</span>Capabilities</a>
-              <a href="#leverage"><span>04</span>Retain a department</a>
-              <a href="#work"><span>05</span>Proof</a>
-              <a href="#partners"><span>06</span>Your execution department</a>
+              <a href="#capabilities"><span>02</span>Capabilities</a>
+              <a href="#about"><span>03</span>Department heads</a>
+              <a href="#work"><span>04</span>Proof</a>
+              <a href="#partners"><span>05</span>For strategists</a>
+              <a href="#leverage"><span>06</span>Retain a department</a>
               <a href="#contact"><span>07</span>Start a project</a>
             </nav>
           </details>
@@ -131,7 +131,7 @@ export default function Home() {
             <span className="cycling-stage"><span className={`cycling-word ${disciplines[activeWord].length > 14 ? 'cycling-word-long' : ''}`} key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
             <span className="executed">Executed.</span>
           </h1>
-          <p className="hero-copy">Bring us the strategy. Bring us the problem. Or ask us to shape both. We turn ambitious work into shipped, working systems.</p>
+          <p className="hero-copy">Every company has more to execute than its team can carry. Make us your Execution Department—we bring the strategy, technical depth, and throughput to get it done.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="https://tidycal.com/dsauljameson/15-minute-meeting">Put us on it <span>↗</span></a>
             <a className="button button-secondary" href="#work">See the proof <span>↓</span></a>
@@ -170,8 +170,23 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="capabilities section-pad" id="capabilities">
+        <div className="section-kicker"><span>02</span><span>What we execute</span></div>
+        <div className="section-heading-row">
+          <h2>The whole department.<br /><em>On demand.</em></h2>
+          <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
+        </div>
+        <div className="capability-list">
+          {capabilities.map(([number, title, copy]) => (
+            <article className="capability-row" key={number}>
+              <span>{number}</span><h3>{title}</h3><p>{copy}</p><b aria-hidden="true">↗</b>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="about section-pad" id="about">
-        <div className="section-kicker light"><span>02</span><span>Department heads</span></div>
+        <div className="section-kicker light"><span>03</span><span>Department heads</span></div>
         <div className="about-intro">
           <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
           <p>Execution Department brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
@@ -200,23 +215,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="capabilities section-pad" id="capabilities">
-        <div className="section-kicker"><span>03</span><span>What we execute</span></div>
+      <section className="work section-pad" id="work">
+        <div className="section-kicker light"><span>04</span><span>Selected proof</span></div>
         <div className="section-heading-row">
-          <h2>The whole department.<br /><em>On demand.</em></h2>
-          <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
+          <h2>Not proposed.<br /><em>Executed.</em></h2>
+          <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
         </div>
-        <div className="capability-list">
-          {capabilities.map(([number, title, copy]) => (
-            <article className="capability-row" key={number}>
-              <span>{number}</span><h3>{title}</h3><p>{copy}</p><b aria-hidden="true">↗</b>
+        <div className="project-list">
+          {projects.map((project) => (
+            <article className="project" key={project.number}>
+              <div className="project-index"><span>{project.number}</span><p>{project.label}</p></div>
+              <div className="project-metric">{project.metric}</div>
+              <div className="project-story"><h3>{project.title}</h3><p>{project.copy}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
             </article>
           ))}
         </div>
       </section>
 
+      <section className="partners section-pad" id="partners">
+        <div className="section-kicker light"><span>05</span><span>For strategists, advisors + agencies</span></div>
+        <div className="partners-head">
+          <p className="partner-audience">You bring the strategy.<br /><span>We bring the engineers.</span></p>
+          <div>
+            <h2>Technical execution<br /><em>that keeps clients happy.</em></h2>
+            <p>You can see the move and own the client relationship. We provide the senior technical bench to build it. Bring us into the room as your client-facing technical team, or keep us quietly behind your brand.</p>
+          </div>
+        </div>
+        <div className="partner-promise"><strong>Visible or invisible. Your call.</strong><p>Our job is to execute the strategy, protect the relationship, and keep your client happy.</p></div>
+        <div className="partner-grid">
+          {partnerModes.map((mode) => (
+            <article key={mode.number}>
+              <span>{mode.number}</span>
+              <h3>{mode.title}</h3>
+              <p>{mode.copy}</p>
+            </article>
+          ))}
+        </div>
+        <div className="partner-footer">
+          <div><span>YOUR CLIENT</span><strong>Your lead stays intact.</strong></div>
+          <div><span>OUR BENCH</span><strong>Senior builders, on demand.</strong></div>
+          <div><span>ONE OUTCOME</span><strong>Delivered without drama.</strong></div>
+          <a href="#contact">Expand your delivery capacity <span>↗</span></a>
+        </div>
+      </section>
+
       <section className="leverage section-pad" id="leverage">
-        <div className="section-kicker leverage-kicker"><span>04</span><span>An alternative to one more hire</span></div>
+        <div className="section-kicker leverage-kicker"><span>06</span><span>An alternative to one more hire</span></div>
         <div className="leverage-head">
           <h2>Don&apos;t hire one role.<br /><em>Retain a department.</em></h2>
           <p>A single senior technical hire can cost a couple hundred thousand dollars a year once salary, recruiting, benefits, and overhead land. For less than half of that, you can put an entire bench of senior technical experience behind the work.</p>
@@ -236,50 +280,6 @@ export default function Home() {
           </article>
         </div>
         <div className="leverage-foot"><p>More range. Less fixed cost. No single-hire bottleneck.</p><a href="#contact">Retain the department <span>↗</span></a></div>
-      </section>
-
-      <section className="work section-pad" id="work">
-        <div className="section-kicker light"><span>05</span><span>Selected proof</span></div>
-        <div className="section-heading-row">
-          <h2>Not proposed.<br /><em>Executed.</em></h2>
-          <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project" key={project.number}>
-              <div className="project-index"><span>{project.number}</span><p>{project.label}</p></div>
-              <div className="project-metric">{project.metric}</div>
-              <div className="project-story"><h3>{project.title}</h3><p>{project.copy}</p><div>{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="partners section-pad" id="partners">
-        <div className="section-kicker light"><span>06</span><span>For people with something to move</span></div>
-        <div className="partners-head">
-          <p className="partner-audience">Product. Leadership.<br /><span>Sales. Marketing.<br />Strategy. AI.</span></p>
-          <div>
-            <h2>We want to be your<br /><em>Execution Department.</em></h2>
-            <p>Whether you are a CEO, a product leader, in sales or marketing, a strategist, an advisor, an agency, or building in AI—we are the technical partner and throughput behind the work. Client-facing when you want us. Invisible when you don&apos;t.</p>
-          </div>
-        </div>
-        <div className="superstar-line"><span>Our job:</span><strong>Make you look like a superstar.</strong></div>
-        <div className="partner-grid">
-          {partnerModes.map((mode) => (
-            <article key={mode.number}>
-              <span>{mode.number}</span>
-              <h3>{mode.title}</h3>
-              <p>{mode.copy}</p>
-            </article>
-          ))}
-        </div>
-        <div className="partner-footer">
-          <div><span>YOUR CLIENT</span><strong>Your lead stays intact.</strong></div>
-          <div><span>OUR BENCH</span><strong>Senior builders, on demand.</strong></div>
-          <div><span>ONE OUTCOME</span><strong>Delivered without drama.</strong></div>
-          <a href="#contact">Expand your delivery capacity <span>↗</span></a>
-        </div>
       </section>
 
       <section className="contact section-pad" id="contact">
