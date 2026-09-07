@@ -110,9 +110,10 @@ export default function Home() {
               <a href="#department"><span>01</span>The department</a>
               <a href="#about"><span>02</span>Department heads</a>
               <a href="#capabilities"><span>03</span>Capabilities</a>
-              <a href="#work"><span>04</span>Proof</a>
-              <a href="#partners"><span>05</span>Your execution department</a>
-              <a href="#contact"><span>06</span>Start a project</a>
+              <a href="#leverage"><span>04</span>Retain a department</a>
+              <a href="#work"><span>05</span>Proof</a>
+              <a href="#partners"><span>06</span>Your execution department</a>
+              <a href="#contact"><span>07</span>Start a project</a>
             </nav>
           </details>
           <a className="brand-lockup brand-lockup-light" href="#top" aria-label="Execution Department home">
@@ -214,8 +215,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="leverage section-pad" id="leverage">
+        <div className="section-kicker leverage-kicker"><span>04</span><span>An alternative to one more hire</span></div>
+        <div className="leverage-head">
+          <h2>Don&apos;t hire one role.<br /><em>Retain a department.</em></h2>
+          <p>A single senior technical hire can cost a couple hundred thousand dollars a year once salary, recruiting, benefits, and overhead land. For less than half of that, you can put an entire bench of senior technical experience behind the work.</p>
+        </div>
+        <div className="leverage-compare">
+          <article className="hire-card">
+            <p>One senior hire</p>
+            <strong>~$200K<span>+</span></strong>
+            <h3>One person.<br />One discipline.<br />Fixed capacity.</h3>
+            <ul><li>Months to recruit</li><li>Salary, benefits + overhead</li><li>One skill set at a time</li></ul>
+          </article>
+          <article className="department-card">
+            <p>Execution Department retainer</p>
+            <strong>&lt;$100K<span>/ year</span></strong>
+            <h3>Senior software, ML, cloud, data, and strategy—matched to the work.</h3>
+            <ul><li>Access to the right senior mix</li><li>Capacity that flexes with the work</li><li>Execution without another org chart</li></ul>
+          </article>
+        </div>
+        <div className="leverage-foot"><p>More range. Less fixed cost. No single-hire bottleneck.</p><a href="#contact">Retain the department <span>↗</span></a></div>
+      </section>
+
       <section className="work section-pad" id="work">
-        <div className="section-kicker light"><span>04</span><span>Selected proof</span></div>
+        <div className="section-kicker light"><span>05</span><span>Selected proof</span></div>
         <div className="section-heading-row">
           <h2>Not proposed.<br /><em>Executed.</em></h2>
           <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
@@ -232,7 +256,7 @@ export default function Home() {
       </section>
 
       <section className="partners section-pad" id="partners">
-        <div className="section-kicker light"><span>05</span><span>For people with something to move</span></div>
+        <div className="section-kicker light"><span>06</span><span>For people with something to move</span></div>
         <div className="partners-head">
           <p className="partner-audience">Product. Leadership.<br /><span>Sales. Marketing.<br />Strategy. AI.</span></p>
           <div>
@@ -259,7 +283,7 @@ export default function Home() {
       </section>
 
       <section className="contact section-pad" id="contact">
-        <div className="section-kicker light"><span>06</span><span>Put us on it</span></div>
+        <div className="section-kicker light"><span>07</span><span>Put us on it</span></div>
         <div className="contact-grid">
           <div className="contact-pitch">
             <h2>What needs<br />executing?</h2>
