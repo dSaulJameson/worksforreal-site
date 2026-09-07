@@ -108,10 +108,10 @@ export default function Home() {
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Primary navigation">
               <a href="#department"><span>01</span>The department</a>
-              <a href="#partners"><span>02</span>For strategists</a>
+              <a href="#about"><span>02</span>Department heads</a>
               <a href="#capabilities"><span>03</span>Capabilities</a>
               <a href="#work"><span>04</span>Proof</a>
-              <a href="#about"><span>05</span>Department heads</a>
+              <a href="#partners"><span>05</span>For strategists</a>
               <a href="#contact"><span>06</span>Start a project</a>
             </nav>
           </details>
@@ -169,27 +169,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="partners section-pad" id="partners">
-        <div className="section-kicker light"><span>02</span><span>For strategists, advisors + agencies</span></div>
-        <div className="partners-head">
-          <h2>You bring the relationship.<br /><em>We bring the throughput.</em></h2>
-          <p>You already know the client, the market, and the move. When delivery becomes the constraint, bring in the department built to get it done.</p>
+      <section className="about section-pad" id="about">
+        <div className="section-kicker light"><span>02</span><span>Department heads</span></div>
+        <div className="about-intro">
+          <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
+          <p>Execution Department brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
         </div>
-        <div className="superstar-line"><span>Our job:</span><strong>Make you look like a superstar.</strong></div>
-        <div className="partner-grid">
-          {partnerModes.map((mode) => (
-            <article key={mode.number}>
-              <span>{mode.number}</span>
-              <h3>{mode.title}</h3>
-              <p>{mode.copy}</p>
-            </article>
-          ))}
-        </div>
-        <div className="partner-footer">
-          <div><span>YOUR CLIENT</span><strong>Your lead stays intact.</strong></div>
-          <div><span>OUR BENCH</span><strong>Senior builders, on demand.</strong></div>
-          <div><span>ONE OUTCOME</span><strong>Delivered without drama.</strong></div>
-          <a href="#contact">Expand your delivery capacity <span>↗</span></a>
+        <div className="founder-grid">
+          <article className="founder-card founder-stephan">
+            <div className="founder-image"><img src="/founders/stephan-portrait.jpg" alt="Stephan Fitzpatrick speaking to a technology audience" /></div>
+            <div className="founder-details">
+              <p className="founder-role">Cofounder / Software + systems</p>
+              <h3>Stephan Fitzpatrick</h3>
+              <p>Software architect and AI strategist with more than a decade across software, data engineering, cloud, DevOps, cybersecurity, and AI-native products. Stephan turns complex technical terrain into systems teams can actually operate.</p>
+              <div className="founder-tags"><span>Software architecture</span><span>Cloud + DevOps</span><span>Secure AI</span></div>
+              <a href="https://www.linkedin.com/in/fitzpatrickstephan/">LinkedIn ↗</a>
+            </div>
+          </article>
+          <article className="founder-card founder-saul">
+            <div className="founder-image"><img src="/founders/saul.png" alt="D. Saul Jameson, machine learning engineer and cofounder" /></div>
+            <div className="founder-details">
+              <p className="founder-role">Cofounder / ML + outcomes</p>
+              <h3>D. Saul Jameson</h3>
+              <p>Machine learning engineer and technical operator with nine-plus years shipping forecasting, optimization, analytics, automation, and AI systems. Saul&apos;s deployed models have supported more than $1B in commercial activity.</p>
+              <div className="founder-tags"><span>Production ML</span><span>Forecasting</span><span>Optimization</span></div>
+              <a href="https://www.linkedin.com/in/dsauljameson/">LinkedIn ↗</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -225,33 +231,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about section-pad" id="about">
-        <div className="section-kicker"><span>05</span><span>Department heads</span></div>
-        <div className="about-intro">
-          <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
-          <p>Execution Department brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
+      <section className="partners section-pad" id="partners">
+        <div className="section-kicker light"><span>05</span><span>Flexible by design</span></div>
+        <div className="partners-head">
+          <p className="partner-audience">Strategists.<br />Advisors. Agencies.</p>
+          <div>
+            <h2>We do this<br /><em>for you.</em></h2>
+            <p>You own the client, the opportunity, and the ambition. We add the strategy, technical depth, and delivery capacity to turn it into something real.</p>
+          </div>
         </div>
-        <div className="founder-grid">
-          <article className="founder-card founder-stephan">
-            <div className="founder-image"><img src="/founders/stephan-portrait.jpg" alt="Stephan Fitzpatrick speaking to a technology audience" /></div>
-            <div className="founder-details">
-              <p className="founder-role">Cofounder / Software + systems</p>
-              <h3>Stephan Fitzpatrick</h3>
-              <p>Software architect and AI strategist with more than a decade across software, data engineering, cloud, DevOps, cybersecurity, and AI-native products. Stephan turns complex technical terrain into systems teams can actually operate.</p>
-              <div className="founder-tags"><span>Software architecture</span><span>Cloud + DevOps</span><span>Secure AI</span></div>
-              <a href="https://www.linkedin.com/in/fitzpatrickstephan/">LinkedIn ↗</a>
-            </div>
-          </article>
-          <article className="founder-card founder-saul">
-            <div className="founder-image"><img src="/founders/saul.png" alt="D. Saul Jameson, machine learning engineer and cofounder" /></div>
-            <div className="founder-details">
-              <p className="founder-role">Cofounder / ML + outcomes</p>
-              <h3>D. Saul Jameson</h3>
-              <p>Machine learning engineer and technical operator with nine-plus years shipping forecasting, optimization, analytics, automation, and AI systems. Saul&apos;s deployed models have supported more than $1B in commercial activity.</p>
-              <div className="founder-tags"><span>Production ML</span><span>Forecasting</span><span>Optimization</span></div>
-              <a href="https://www.linkedin.com/in/dsauljameson/">LinkedIn ↗</a>
-            </div>
-          </article>
+        <div className="superstar-line"><span>Flexible by design.</span><strong>Client-facing when you need us. Invisible when you don&apos;t.</strong></div>
+        <div className="partner-grid">
+          {partnerModes.map((mode) => (
+            <article key={mode.number}>
+              <span>{mode.number}</span>
+              <h3>{mode.title}</h3>
+              <p>{mode.copy}</p>
+            </article>
+          ))}
+        </div>
+        <div className="partner-footer">
+          <div><span>YOUR CLIENT</span><strong>Your lead stays intact.</strong></div>
+          <div><span>OUR BENCH</span><strong>Senior builders, on demand.</strong></div>
+          <div><span>ONE OUTCOME</span><strong>Delivered without drama.</strong></div>
+          <a href="#contact">Expand your delivery capacity <span>↗</span></a>
         </div>
       </section>
 
