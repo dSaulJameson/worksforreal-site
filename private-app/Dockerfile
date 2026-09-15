@@ -8,10 +8,10 @@ FROM node:24-bookworm-slim
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=dependencies /app/node_modules ./node_modules
-COPY package.json ./
-COPY *.mjs ./
-COPY login.html ./
-COPY brand.png ./
+COPY --chown=node:node package.json ./
+COPY --chown=node:node *.mjs ./
+COPY --chown=node:node login.html ./
+COPY --chown=node:node brand.png ./
 RUN mkdir -p /data && chown node:node /data
 USER node
 EXPOSE 3000
