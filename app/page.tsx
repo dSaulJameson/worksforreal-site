@@ -37,7 +37,7 @@ const projects = [
     label: 'Applied ML / Optimization',
     metric: '$300M',
     title: 'Bidding intelligence built into the transaction.',
-    copy: 'A production recommendation and bidding-optimization engine for a national auction marketplace—designed around real-time financial decisions and more than $300M in annual business.',
+    copy: 'A production recommendation and bidding-optimization engine for a national auction marketplace, designed around real-time financial decisions and more than $300M in annual business.',
     tags: ['Recommendation', 'Optimization', 'Production ML'],
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     number: '03',
     label: 'Software / Growth systems',
     metric: '1 system',
-    title: 'Content, audiences, and paid media—connected.',
+    title: 'Content, audiences, and paid media. Connected.',
     copy: 'A production platform combining content planning, multi-channel publishing, saved audiences, reach estimates, post promotion, and campaign controls in one operating product.',
     tags: ['Full stack', 'Workflow', 'Growth'],
   },
@@ -99,7 +99,7 @@ export default function Home() {
     const email = String(values.get('email') || '');
     const company = String(values.get('company') || '');
     const problem = String(values.get('problem') || '');
-    const subject = encodeURIComponent(`Execution Associates inquiry — ${name}`);
+    const subject = encodeURIComponent(`Execution Associates inquiry: ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nWhat needs to be executed:\n${problem}`);
     window.location.href = `mailto:info@execution.associates?subject=${subject}&body=${body}`;
   }
@@ -160,10 +160,10 @@ export default function Home() {
       <section className="approach section-pad" id="approach">
         <div className="section-kicker"><span>01</span><span>Our approach</span></div>
         <div className="approach-intro">
-          <h2>We don’t stop at strategy.<br /><em>We make it work.</em></h2>
+          <h2>We don’t stop at strategy.<br /><em>We execute.</em></h2>
           <div className="approach-copy">
-            <p>We can shape the plan or work from yours—then build, launch, and see it through.</p>
-            <p>AI, cloud infrastructure, data, software, automation, product, or the strategy connecting it all—whatever it is, we execute.</p>
+            <p>Start with what you have. We’ll help define the rest and get it done.</p>
+            <p>AI, cloud infrastructure, data, software, automation, product, or the strategy connecting it all. Whatever it is, we execute.</p>
           </div>
         </div>
         <div className="execution-loop" aria-label="How we execute">
@@ -282,7 +282,7 @@ export default function Home() {
           <article className="team-card">
             <p>Execution Associates retainer</p>
             <strong>&lt;$100K<span>/ year</span></strong>
-            <h3>Senior software, ML, cloud, data, and strategy—matched to the work.</h3>
+            <h3>Senior software, ML, cloud, data, and strategy, matched to the work.</h3>
             <ul><li>Access to the right senior mix</li><li>Capacity that flexes with the work</li><li>Execution without another org chart</li></ul>
           </article>
         </div>

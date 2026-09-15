@@ -14,20 +14,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://execution.associates'),
-  title: 'Execution Associates — Whatever it is. Executed.',
+  title: 'Execution Associates | Whatever it is. Executed.',
   description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Execution Associates — Whatever it is. Executed.',
+    title: 'Execution Associates | Whatever it is. Executed.',
     description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
     url: '/',
     siteName: 'Execution Associates',
     type: 'website',
-    images: [{ url: '/execution-associates-black.png', width: 6000, height: 1774, alt: 'Execution Associates — Whatever it is. Executed.' }],
+    images: [{ url: '/execution-associates-black.png', width: 6000, height: 1774, alt: 'Execution Associates. Whatever it is. Executed.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Execution Associates — Whatever it is. Executed.',
+    title: 'Execution Associates | Whatever it is. Executed.',
     description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
     images: ['/execution-associates-black.png'],
   },
