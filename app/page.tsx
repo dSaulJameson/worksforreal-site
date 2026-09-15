@@ -3,7 +3,7 @@
 import type { FormEvent } from 'react';
 import { useEffect, useState } from 'react';
 
-const disciplines = ['AI', 'Cloud infrastructure', 'Data', 'Software', 'Automation', 'Strategy'];
+const disciplines = ['AI', 'Cloud infrastructure', 'Data room', 'Software', 'Automation', 'Strategy'];
 
 const clients = [
   ['Atlassian', '/clients/atlassian.svg'],
@@ -111,13 +111,13 @@ export default function Home() {
           <details className="site-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Primary navigation">
-              <a href="#approach"><span>01</span>Our approach</a>
-              <a href="#capabilities"><span>02</span>Capabilities</a>
-              <a href="#about"><span>03</span>The founders</a>
-              <a href="#work"><span>04</span>Proof</a>
-              <a href="#partners"><span>05</span>For strategists</a>
-              <a href="#leverage"><span>06</span>Retain a team</a>
-              <a href="#contact"><span>07</span>Start a project</a>
+              <a href="#approach">Our approach</a>
+              <a href="#capabilities">Capabilities</a>
+              <a href="#about">The founders</a>
+              <a href="#work">Proof</a>
+              <a href="#partners">For strategists</a>
+              <a href="#leverage">Retain a team</a>
+              <a href="#contact">Start a project</a>
             </nav>
           </details>
           <a className="brand-lockup brand-lockup-light" href="#top" aria-label="Execution Associates home">
@@ -158,7 +158,6 @@ export default function Home() {
       </section>
 
       <section className="approach section-pad" id="approach">
-        <div className="section-kicker"><span>01</span><span>Our approach</span></div>
         <div className="approach-intro">
           <h2>We don’t stop at strategy.<br /><em>We execute.</em></h2>
           <div className="approach-copy">
@@ -166,19 +165,10 @@ export default function Home() {
             <p>AI, cloud infrastructure, data, software, automation, product, or the strategy connecting it all. Whatever it is, we execute.</p>
           </div>
         </div>
-        <div className="execution-loop" aria-label="How we execute">
-          <div><span>01</span><strong>Define</strong><p>Turn the ambition into the right work.</p></div>
-          <div><span>02</span><strong>Build</strong><p>Put senior hands directly on the problem.</p></div>
-          <div><span>03</span><strong>Ship</strong><p>Get it into the business, not just the deck.</p></div>
-          <div><span>04</span><strong>Own</strong><p>Stay accountable until the outcome is real.</p></div>
-        </div>
-      </section>
-
-      <section className="capabilities section-pad" id="capabilities">
-        <div className="section-kicker"><span>02</span><span>What we execute</span></div>
+        <div className="capabilities" id="capabilities">
         <div className="section-heading-row">
           <h2>The whole team.<br /><em>On demand.</em></h2>
-          <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
+          <p>Senior technical operators stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
         </div>
         <div className="capability-list">
           {capabilities.map(([number, title, copy]) => (
@@ -187,10 +177,11 @@ export default function Home() {
             </article>
           ))}
         </div>
+        </div>
       </section>
 
       <section className="about section-pad" id="about">
-        <div className="section-kicker light"><span>03</span><span>The founders</span></div>
+        <div className="section-kicker light"><span>The founders</span></div>
         <div className="about-intro">
           <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
           <p>Execution Associates brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
@@ -220,7 +211,7 @@ export default function Home() {
       </section>
 
       <section className="work section-pad" id="work">
-        <div className="section-kicker light"><span>04</span><span>Selected proof</span></div>
+        <div className="section-kicker light"><span>Selected proof</span></div>
         <div className="section-heading-row">
           <h2>Not proposed.<br /><em>Executed.</em></h2>
           <p>Representative work across machine learning, software products, operational systems, and secure AI.</p>
@@ -238,7 +229,6 @@ export default function Home() {
 
       <section className="partners section-pad" id="partners">
         <div className="partner-opening">
-          <div className="section-kicker light"><span>05</span></div>
           <h2><span>For strategists,</span><span>advisors + agencies.</span></h2>
         </div>
         <div className="partners-head">
@@ -267,7 +257,7 @@ export default function Home() {
       </section>
 
       <section className="leverage section-pad" id="leverage">
-        <div className="section-kicker leverage-kicker"><span>06</span><span>An alternative to one more hire</span></div>
+        <div className="section-kicker leverage-kicker"><span>An alternative to one more hire</span></div>
         <div className="leverage-head">
           <h2>Don&apos;t hire one role.<br /><em>Retain a team.</em></h2>
           <p>A single senior technical hire can cost a couple hundred thousand dollars a year once salary, recruiting, benefits, and overhead land. For less than half of that, you can put an entire bench of senior technical experience behind the work.</p>
@@ -290,7 +280,7 @@ export default function Home() {
       </section>
 
       <section className="contact section-pad" id="contact">
-        <div className="section-kicker light"><span>07</span><span>Put us on it</span></div>
+        <div className="section-kicker light"><span>Put us on it</span></div>
         <div className="contact-grid">
           <div className="contact-pitch">
             <h2>What needs<br />executing?</h2>
