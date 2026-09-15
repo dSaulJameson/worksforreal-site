@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+umask 027
+revision="${1:-}"
+[[ "$revision" =~ ^[0-9a-f]{40}$ ]] || exit 64
+release="/opt/worksforreal/releases/$revision"
+[[ "$(readlink -f /opt/worksforreal/current)" == "$release" ]] || exit 65
+[[ -f "$release/private-app/compose.yml" && -f /opt/execution-private/runtime.env ]] || exit 66
+image="execution-private-gateway:$revision"
+MAILFLARE_REVISION="$(tr -d '\r\n' < "$release/private-app/mailflare-revision.txt")"
+[[ "$MAILFLARE_REVISION" =~ ^[0-9a-f]{40}$ ]] || exit 68
+export MAILFLARE_REVISION
+if ! docker image inspect "execution-mailflare:$MAILFLARE_REVISION" >/dev/null 2>&1; then
+  docker build -t "execution-mailflare:$MAILFLARE_REVISION" "https://github.com/dSaulJameson/execution-associates-mail.git#$MAILFLARE_REVISION"
+fi
+previous="$(docker inspect --format '{{.Config.Image}}' execution-private-gateway 2>/dev/null || true)"
+docker build -t "$image" "$release/private-app"
+if ! EXECUTION_IMAGE_TAG="$revision" docker compose --env-file /opt/execution-private/runtime.env -f "$release/private-app/compose.yml" up -d --remove-orphans --wait --wait-timeout 120; then
+  if [[ "$previous" == execution-private-gateway:* ]]; then
+    EXECUTION_IMAGE_TAG="${previous#execution-private-gateway:}" docker compose --env-file /opt/execution-private/runtime.env -f "$release/private-app/compose.yml" up -d --wait --wait-timeout 120
+  fi
+  exit 67
+fi
+echo "Execution private app activated at $revision"

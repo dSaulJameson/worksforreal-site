@@ -38,6 +38,8 @@ jobs:
           pnpm typecheck
           pnpm lint
           pnpm build
+          node --test private-app/test.mjs
+          node --check private-app/server.mjs
 
       - name: Package deployment source
         run: |
@@ -83,3 +85,12 @@ jobs:
           ssh -i ~/.ssh/hosthatch_deploy -o BatchMode=yes -o IdentitiesOnly=yes \
             "deploy@${HOSTHATCH_HOST}" \
             "sudo /usr/local/sbin/deploy-worksforreal /tmp/worksforreal-${GITHUB_SHA}.tgz ${GITHUB_SHA}"
+
+      - name: Activate private app
+        env:
+          HOSTHATCH_HOST: ${{ vars.HOSTHATCH_HOST }}
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/hosthatch_deploy -o BatchMode=yes -o IdentitiesOnly=yes \
+            "deploy@${HOSTHATCH_HOST}" \
+            "sudo /usr/local/sbin/deploy-execution-private ${GITHUB_SHA}"

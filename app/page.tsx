@@ -7,7 +7,7 @@ const disciplines = ['AI', 'Cloud infrastructure', 'Data', 'Software', 'Automati
 
 const clients = [
   ['Atlassian', '/clients/atlassian.svg'],
-  ['U.S. Department of Defense', '/clients/dod.svg'],
+  ['U.S. DoD', '/clients/dod.svg'],
   ['Beacon Hill', '/clients/beacon-hill.png'],
   ['Capital Group', '/clients/capital-group.png'],
   ['Postmates', '/clients/postmates.png'],
@@ -65,17 +65,17 @@ const projects = [
 const partnerModes = [
   {
     number: '01',
-    title: 'Quietly behind you',
+    title: 'White-label delivery',
     copy: 'Your brand, your relationship, your room. We operate as the senior delivery bench your client never needs to know was external.',
   },
   {
     number: '02',
-    title: 'Side by side',
+    title: 'Joint delivery',
     copy: 'We join the calls, carry the technical work, and make the plan real while you continue leading the strategy and relationship.',
   },
   {
     number: '03',
-    title: 'Out in front',
+    title: 'Direct delivery',
     copy: 'Hand us the outcome. We can shape the strategy, run delivery, face the client, and stay accountable through launch and beyond.',
   },
 ];
@@ -95,9 +95,9 @@ export default function Home() {
     const email = String(values.get('email') || '');
     const company = String(values.get('company') || '');
     const problem = String(values.get('problem') || '');
-    const subject = encodeURIComponent(`Execution Department inquiry — ${name}`);
+    const subject = encodeURIComponent(`Execution Associates inquiry — ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nWhat needs to be executed:\n${problem}`);
-    window.location.href = `mailto:info@worksforreal.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@execution.associates?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -107,17 +107,17 @@ export default function Home() {
           <details className="site-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Primary navigation">
-              <a href="#department"><span>01</span>The department</a>
+              <a href="#approach"><span>01</span>Our approach</a>
               <a href="#capabilities"><span>02</span>Capabilities</a>
-              <a href="#about"><span>03</span>Department heads</a>
+              <a href="#about"><span>03</span>The founders</a>
               <a href="#work"><span>04</span>Proof</a>
               <a href="#partners"><span>05</span>For strategists</a>
-              <a href="#leverage"><span>06</span>Retain a department</a>
+              <a href="#leverage"><span>06</span>Retain a team</a>
               <a href="#contact"><span>07</span>Start a project</a>
             </nav>
           </details>
-          <a className="brand-lockup brand-lockup-light" href="#top" aria-label="Execution Department home">
-            <img src="/execution-department-logo.png" alt="Execution Department" />
+          <a className="brand-lockup brand-lockup-light" href="#top" aria-label="Execution Associates home">
+            <img src="/execution-associates-white.png" alt="Execution Associates" width={6000} height={1774} />
           </a>
           <a className="header-cta" href="#contact">Put us on it <span>↗</span></a>
         </header>
@@ -131,7 +131,7 @@ export default function Home() {
             <span className="cycling-stage"><span className={`cycling-word ${disciplines[activeWord].length > 14 ? 'cycling-word-long' : ''}`} key={disciplines[activeWord]}>{disciplines[activeWord]}</span></span>
             <span className="executed">Executed.</span>
           </h1>
-          <p className="hero-copy">Every company has more to execute than its team can carry. Make us your Execution Department—we bring the strategy, technical depth, and throughput to get it done.</p>
+          <p className="hero-copy">Senior technical partners. From strategy to shipped software, AI, and infrastructure.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="https://tidycal.com/dsauljameson/15-minute-meeting">Put us on it <span>↗</span></a>
             <a className="button button-secondary" href="#work">See the proof <span>↓</span></a>
@@ -153,11 +153,11 @@ export default function Home() {
         <div className="hero-proof"><strong>$1B+</strong><span>processed by systems we shipped</span></div>
       </section>
 
-      <section className="department section-pad" id="department">
-        <div className="section-kicker"><span>01</span><span>The department</span></div>
-        <div className="department-intro">
+      <section className="approach section-pad" id="approach">
+        <div className="section-kicker"><span>01</span><span>Our approach</span></div>
+        <div className="approach-intro">
           <h2>We do strategy.<br />We do execution.<br /><em>We do both.</em></h2>
-          <div className="department-copy">
+          <div className="approach-copy">
             <p>Sometimes the plan is clear and you need throughput. Sometimes the problem is clear and the plan is not. We meet the work wherever it is.</p>
             <p>AI, cloud infrastructure, data, software, automation, product, or the strategy connecting it all—whatever it is, we execute.</p>
           </div>
@@ -173,7 +173,7 @@ export default function Home() {
       <section className="capabilities section-pad" id="capabilities">
         <div className="section-kicker"><span>02</span><span>What we execute</span></div>
         <div className="section-heading-row">
-          <h2>The whole department.<br /><em>On demand.</em></h2>
+          <h2>The whole team.<br /><em>On demand.</em></h2>
           <p>Two senior technical founders stay close to the question, the architecture, and the release. Bring a defined build or a problem that still needs shaping.</p>
         </div>
         <div className="capability-list">
@@ -186,10 +186,10 @@ export default function Home() {
       </section>
 
       <section className="about section-pad" id="about">
-        <div className="section-kicker light"><span>03</span><span>Department heads</span></div>
+        <div className="section-kicker light"><span>03</span><span>The founders</span></div>
         <div className="about-intro">
           <h2>Software depth.<br />Machine-learning depth.<br /><em>One accountable team.</em></h2>
-          <p>Execution Department brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
+          <p>Execution Associates brings together two complementary builders. Stephan goes deepest on software and systems. Saul goes deepest on ML and data. Both can carry a hard technical problem from strategy through production.</p>
         </div>
         <div className="founder-grid">
           <article className="founder-card founder-stephan">
@@ -262,7 +262,7 @@ export default function Home() {
       <section className="leverage section-pad" id="leverage">
         <div className="section-kicker leverage-kicker"><span>06</span><span>An alternative to one more hire</span></div>
         <div className="leverage-head">
-          <h2>Don&apos;t hire one role.<br /><em>Retain a department.</em></h2>
+          <h2>Don&apos;t hire one role.<br /><em>Retain a team.</em></h2>
           <p>A single senior technical hire can cost a couple hundred thousand dollars a year once salary, recruiting, benefits, and overhead land. For less than half of that, you can put an entire bench of senior technical experience behind the work.</p>
         </div>
         <div className="leverage-compare">
@@ -272,14 +272,14 @@ export default function Home() {
             <h3>One person.<br />One discipline.<br />Fixed capacity.</h3>
             <ul><li>Months to recruit</li><li>Salary, benefits + overhead</li><li>One skill set at a time</li></ul>
           </article>
-          <article className="department-card">
-            <p>Execution Department retainer</p>
+          <article className="team-card">
+            <p>Execution Associates retainer</p>
             <strong>&lt;$100K<span>/ year</span></strong>
             <h3>Senior software, ML, cloud, data, and strategy—matched to the work.</h3>
             <ul><li>Access to the right senior mix</li><li>Capacity that flexes with the work</li><li>Execution without another org chart</li></ul>
           </article>
         </div>
-        <div className="leverage-foot"><p>More range. Less fixed cost. No single-hire bottleneck.</p><a href="#contact">Retain the department <span>↗</span></a></div>
+        <div className="leverage-foot"><p>More range. Less fixed cost. No single-hire bottleneck.</p><a href="#contact">Retain the team <span>↗</span></a></div>
       </section>
 
       <section className="contact section-pad" id="contact">
@@ -289,24 +289,24 @@ export default function Home() {
             <h2>What needs<br />executing?</h2>
             <p>You do not need a polished brief. Tell us what needs to move, what keeps getting stuck, or which client promise needs a serious delivery team behind it.</p>
             <a href="https://tidycal.com/dsauljameson/15-minute-meeting">Book 15 minutes <span>↗</span></a>
-            <a className="email-link" href="mailto:info@worksforreal.com">info@worksforreal.com</a>
+            <a className="email-link" href="mailto:info@execution.associates">info@execution.associates</a>
           </div>
           <form className="contact-form" onSubmit={handleContactSubmit}>
             <label>Name<input name="name" required autoComplete="name" /></label>
             <label>Work email<input name="email" type="email" required autoComplete="email" /></label>
             <label>Company<input name="company" autoComplete="organization" /></label>
             <label>What needs to be executed?<textarea name="problem" required rows={5} placeholder="The goal, the current reality, and what is getting in the way." /></label>
-            <button type="submit">Send it to the department <span>↗</span></button>
-            <p>This opens a message to info@worksforreal.com in your email app.</p>
+            <button type="submit">Send it to the team <span>↗</span></button>
+            <p>This opens a message to info@execution.associates in your email app.</p>
           </form>
         </div>
       </section>
 
       <footer>
-        <a className="brand-lockup brand-lockup-light" href="#top"><img src="/execution-department-logo.png" alt="Execution Department" /></a>
+        <a className="brand-lockup brand-lockup-light" href="#top"><img src="/execution-associates-white.png" alt="Execution Associates" width={6000} height={1774} /></a>
         <p>Strategy, systems, and software. Executed.</p>
-        <div><a href="mailto:info@worksforreal.com">Email</a><a href="https://www.linkedin.com/in/fitzpatrickstephan/">Stephan</a><a href="https://www.linkedin.com/in/dsauljameson/">Saul</a></div>
-        <span>© 2026 Execution Department</span>
+        <div><a href="mailto:info@execution.associates">Email</a><a href="https://www.linkedin.com/in/fitzpatrickstephan/">Stephan</a><a href="https://www.linkedin.com/in/dsauljameson/">Saul</a></div>
+        <span>© 2026 Execution Associates</span>
       </footer>
     </main>
   );

@@ -13,23 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://worksforreal.com'),
-  title: 'Execution Department — Whatever it is. Executed.',
+  metadataBase: new URL('https://execution.associates'),
+  title: 'Execution Associates — Whatever it is. Executed.',
   description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Execution Department — Whatever it is. Executed.',
+    title: 'Execution Associates — Whatever it is. Executed.',
     description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
     url: '/',
-    siteName: 'Execution Department',
+    siteName: 'Execution Associates',
     type: 'website',
-    images: [{ url: '/og.png', width: 1732, height: 908, alt: 'Execution Department — Whatever it is. Executed.' }],
+    images: [{ url: '/execution-associates-black.png', width: 6000, height: 1774, alt: 'Execution Associates — Whatever it is. Executed.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Execution Department — Whatever it is. Executed.',
+    title: 'Execution Associates — Whatever it is. Executed.',
     description: 'Strategy and execution for AI, software, cloud infrastructure, data, automation, and ambitious technical work.',
-    images: ['/og.png'],
+    images: ['/execution-associates-black.png'],
   },
 };
 
