@@ -16,6 +16,10 @@ const clients = [
   ['Otsuka', '/clients/otsuka.png'],
   ['Allied World', '/clients/allied-world.png'],
   ['Augment Risk', '/clients/augment-risk.png'],
+  ['Startup CPG', '/clients/startup-cpg.png', 'supplied-logo'],
+  ['Index Fresh', '/clients/index-fresh.png', 'supplied-logo'],
+  ['The Cannabis Chamber of Commerce', '/clients/cannabis-chamber.png', 'supplied-logo'],
+  ['Chako’s Social', '/clients/chakos-social.png', 'supplied-logo'],
 ];
 
 const capabilities = [
@@ -144,7 +148,7 @@ export default function Home() {
             <div className="logo-track">
               {[0, 1].map((copy) => (
                 <div className="logo-set" key={copy} aria-hidden={copy === 1 ? 'true' : undefined}>
-                  {clients.map(([name, src]) => <img key={`${copy}-${name}`} src={src} alt={copy === 0 ? `${name} logo` : ''} />)}
+                  {clients.map(([name, src, className]) => <img key={`${copy}-${name}`} className={className} src={src} alt={copy === 0 ? `${name} logo` : ''} />)}
                 </div>
               ))}
             </div>
@@ -233,11 +237,14 @@ export default function Home() {
       </section>
 
       <section className="partners section-pad" id="partners">
-        <div className="section-kicker light"><span>05</span><span>For strategists, advisors + agencies</span></div>
+        <div className="partner-opening">
+          <div className="section-kicker light"><span>05</span></div>
+          <h2><span>For strategists,</span><span>advisors + agencies.</span></h2>
+        </div>
         <div className="partners-head">
           <p className="partner-audience">You bring the strategy.<br /><span>We bring the engineers.</span></p>
           <div>
-            <h2>Technical execution<br /><em>that keeps clients happy.</em></h2>
+            <h3>Technical execution<br /><em>that keeps clients happy.</em></h3>
             <p>You can see the move and own the client relationship. We provide the senior technical bench to build it. Bring us into the room as your client-facing technical team, or keep us quietly behind your brand.</p>
           </div>
         </div>
