@@ -22,7 +22,7 @@ async function sendMail(message) {
     method: 'POST', headers: { Authorization: `Bearer ${process.env.CF_MAIL_TOKEN}`, 'Content-Type': 'application/json' }, body: JSON.stringify(message), signal: AbortSignal.timeout(30000),
   });
   const result = await response.json();
-  if (!response.ok || result.success === false) {
+  if (!response.ok || result.success === false || result.result?.permanent_bounces?.length || result.result?.suppressed_recipients?.length) {
     // Never log message bodies or magic links.
     console.error('Mail delivery failed', response.status, result.errors?.map(e => ({ code:e.code, message:e.message })));
     throw new Error('Email delivery unavailable');

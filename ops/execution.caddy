@@ -12,7 +12,7 @@ www.execution.associates, executionassociates.com, www.executionassociates.com {
 app.execution.associates {
     import security
     header X-Robots-Tag "noindex, nofollow, noarchive"
-    header Referrer-Policy "no-referrer"
+    header >Referrer-Policy "no-referrer"
     request_body {
         max_size 30MB
     }

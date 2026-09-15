@@ -20,6 +20,11 @@ for (const account of accounts) {
   assert.equal((await me.json()).user.email,account.mailbox);
   const inbox = await fetch(origin+'/inbox',{headers:{cookie:cookies},redirect:'manual'});
   assert.equal(inbox.status,200);
+  const html = await inbox.text();
+  assert.ok(html.includes('Execution Associates'));
+  assert.ok(!html.includes('Execution Department'));
+  const source = await fetch(origin+'/licenses',{headers:{cookie:cookies},redirect:'manual'});
+  if (account.key === 'saul') assert.ok((await source.text()).includes('github.com/dSaulJameson/execution-associates-mail'));
   const boxes = await fetch(origin+'/api/mailboxes',{headers:{cookie:cookies}});
   const boxData=await boxes.json();
   assert.ok(boxData.mailboxes.every(b=>b.localPart === account.key));
