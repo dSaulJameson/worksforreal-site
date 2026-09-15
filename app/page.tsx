@@ -160,9 +160,9 @@ export default function Home() {
       <section className="approach section-pad" id="approach">
         <div className="section-kicker"><span>01</span><span>Our approach</span></div>
         <div className="approach-intro">
-          <h2>We do strategy.<br />We do execution.<br /><em>We do both.</em></h2>
+          <h2>We don’t stop at strategy.<br /><em>We make it work.</em></h2>
           <div className="approach-copy">
-            <p>Sometimes the plan is clear and you need throughput. Sometimes the problem is clear and the plan is not. We meet the work wherever it is.</p>
+            <p>We can shape the plan or work from yours—then build, launch, and see it through.</p>
             <p>AI, cloud infrastructure, data, software, automation, product, or the strategy connecting it all—whatever it is, we execute.</p>
           </div>
         </div>
