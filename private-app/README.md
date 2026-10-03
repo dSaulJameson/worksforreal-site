@@ -1,5 +1,7 @@
 # Execution Associates private mail
 
+> **Historical Docker deployment notes.** This repository is not deployed on the new HostHatch K3s cluster. Execution Associates mail moved to another server. Verify that server before changing mail or DNS; see [production status](../docs/production-deployment.md).
+
 Private entry point: https://app.execution.associates. There is deliberately no public website login link. Better Auth accepts magic links for the two identities configured in the root-only runtime environment; Mailflare password authentication is blocked at the gateway.
 
 The maintained AGPL inbox source is https://github.com/dSaulJameson/execution-associates-mail. `mailflare-revision.txt` pins its production commit. Changes to that repository require reviewing and updating this pin; upstream updates are not automatically deployed.
