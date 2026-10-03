@@ -77,6 +77,7 @@ if (command === 'fix-routing-scope') {
   console.log('Added zone-settings permission for email routing.');
 }
 if (command === 'prepare-domains') {
+  throw new Error('Retired deployment target: these domains moved off the old HostHatch VPS. Review live DNS before any change.');
   const redirectZone = (await cf('/zones?name=executionassociates.com'))[0];
   for (const [z, names] of [[zone, ['execution.associates', 'www.execution.associates', 'app.execution.associates']], [redirectZone, ['executionassociates.com', 'www.executionassociates.com']]]) {
     for (const name of names) await dns(z.id, { type: 'A', name, content: '170.205.38.181', proxied: true });
